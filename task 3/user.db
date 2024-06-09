@@ -1,0 +1,18 @@
+CREATE TABLE people (
+  id INT PRIMARY KEY,
+  name VARCHAR(255),
+  phone VARCHAR(20),
+  email VARCHAR(255),
+  spam_likelihood FLOAT
+);
+
+CREATE TABLE contact_list (
+  user_id INT,
+  person_id INT,
+  PRIMARY KEY (user_id, person_id)
+);
+
+CREATE TABLE registered_users (
+  id INT PRIMARY KEY,
+  email VARCHAR(255)
+);
